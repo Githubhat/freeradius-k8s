@@ -2,7 +2,7 @@
 - cd freeradius-k8s
 ##Create freeradius Pod using deployment file 
 - kubectl create -f 01-deployment.yml
-## Create freeradius Pod service using services file
+##Create freeradius Pod service using services file
 - kubectl create -f 02-services.yml
 ##Check Pod status
 - kubectl get pod -A
