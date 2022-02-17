@@ -13,6 +13,6 @@
 <h2>Identify the worker node on which freeradius Pod is running using below command</h4>
     <p>kubectl get pods -o wide</p>
 <h2>Testing freeradius authentication:</h3>
-<p><b>Note:</b> The worker node IP on which POD is running need to be used for authentication testing </p>
+<p><b>Note:</b> The worker node IP on which POD is running need to be used for authentication testing followed by external port </p>
 <h2>Run the below command from all nodes: X denotes IP Address and Port </h4>
     <p>radtest testing password X.X.X.X:XXXX 0 SECRET</p>
