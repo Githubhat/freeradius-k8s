@@ -1,0 +1,21 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: lb-freeradius
+  annotations:
+    metallb.universe.tf/allow-shared-ip: 'true'
+spec:
+  ports:
+    - name: 'freeradius'
+      protocol: UDP
+      port: 1812
+      targetPort: 1812
+      nodePort: 30000
+    - name: 'radius-acct'
+      protocol: UDP
+      port: 1813
+      targetPort: 1813
+      nodePort: 30001
+  selector:
+    run: freeradius
+  type: NodePort
